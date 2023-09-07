@@ -5,7 +5,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import useMenu from '../../../hooks/useMenu.';
 import { Helmet } from 'react-helmet-async';
-import FoodCard from '../../../Components/SectionTitle/FoodCard/FoodCard';
+
 import OrderTab from '../OrderTab/OrderTab';
 
 const Order = () => {
