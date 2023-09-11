@@ -7,10 +7,17 @@ import useMenu from '../../../hooks/useMenu.';
 import { Helmet } from 'react-helmet-async';
 
 import OrderTab from '../OrderTab/OrderTab';
+import { useParams } from 'react-router-dom';
 
 const Order = () => {
-    const [tabIndex, setTabIndex] = useState(0);
+    const categories = ['salad', 'soup', 'pizza', 'dessert', 'drinks']
+    const { category } = useParams()
+    const initialIndex = categories.indexOf(category)
+
+    const [tabIndex, setTabIndex] = useState(initialIndex);
     const [menu] = useMenu();
+
+
     const dessert = menu.filter(item => item.category === 'dessert')
     const pizza = menu.filter(item => item.category === 'pizza')
     const soup = menu.filter(item => item.category === 'soup')
